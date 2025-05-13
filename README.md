@@ -23,12 +23,14 @@
 	```
     # using php
     composer install
-    php artisan serve
+	php artisan key:generate
 	php artisan access-key:generate
 	php artisan migrate
+    php artisan serve
     
     # using docker
 	docker compose -f docker-compose.dev.yml up -d
+	docker exec app php artisan key:generate
 	docker exec app php artisan access-key:generate
 	```
 
